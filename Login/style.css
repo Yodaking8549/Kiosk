@@ -86,3 +86,10 @@ label a{
     color: #fff;
     text-decoration: none;
 }
+.subbottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: small;
+    color: #fff;
+}
