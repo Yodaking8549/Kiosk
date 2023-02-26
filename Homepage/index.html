@@ -15,6 +15,7 @@
                 <nav class="topnav">
                 <a class="active" href="#über-uns">Über uns</a>
                 <a href="#angebot">Angebot</a>
+                <a href="#Öffnungszeiten">Öffnungszeiten</a>
                 </nav>
             </header>
 
@@ -101,6 +102,18 @@
                          </ul>
                     </ul>
                 </div>
+                </section>
+                <section id="Öffnungszeiten">
+                    <div class="Öffnungszeiten">
+                        <h2>Öffnungszeiten</h2>
+                        <ul>
+                          <li>Montag - Freitag</li>
+                          <li>1. Pause: 09:35 - 09:50 Uhr</li>
+                          <li>2. Pause: 11:30 - 11:45 Uhr</li>
+                        </ul>
+                        <div class="box" onclick="revealAnswer()">Hat der Kiosk heute offen? Klick hier, 
+                            um es herauszufinden!</div>
+                        <div class="answer" id="answer">Ja, der Kiosk ist heute geöffnet!</div>
                 </section>
             </main>
 
@@ -201,7 +214,18 @@ navLinks.forEach(function(link) {
     });
   });
 });
+function revealAnswer() {
+			document.getElementById("answer").style.display = "block";
+			document.querySelector(".box").style.animationName = "disappear";
+			document.querySelector(".box").style.animationDuration = "1s";
+			document.querySelector(".box").style.animationFillMode = "forwards";
+		}
 
+		document.addEventListener("animationend", function(event) {
+			if (event.animationName === "disappear") {
+				document.querySelector(".box").style.display = "none";
+			}
+		});
   </script>
 </body>
 </html>

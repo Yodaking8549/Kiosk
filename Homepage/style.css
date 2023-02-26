@@ -73,3 +73,27 @@ h2{
 p{
   font-size: larger;
 }
+.box {
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: yellow;
+  margin-top: 20px;
+  animation-name: reveal;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
