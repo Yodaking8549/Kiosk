@@ -9,9 +9,9 @@
 
 
     <body>
+        <div class="background-image"></div>
         <div class="container">
             <header>
-                <h1>Willkommen beim Schulkiosk</h1>
                 <nav class="topnav">
                 <a class="active" href="#über-uns">Über uns</a>
                 <a href="#angebot">Angebot</a>
@@ -19,6 +19,7 @@
             </header>
 
             <main>
+                <h1>Willkommen beim Schulkiosk</h1>
                 <section id="über-uns">
                     <h2>Über uns</h2>
                     <div class="text">
@@ -26,7 +27,7 @@
                         unserer Schule eine breite Auswahl an gesunden und leckeren Snacks, Getränken 
                         und anderen Produkten anbieten zu können. Unser Kiosk steht auf dem oberen 
                         Schulhof und ist in beiden großen Pausen geöffnet.</p>
-                        <img src="./images/kiosk.jpg" alt="Bild des Kiosks">
+                        <div class="img"><img src="./images/kiosk.jpg" alt="Bild des Kiosks"></div>
                         <p>Unsere Produkte sind sorgfältig ausgewählt und bieten eine gesunde Alternative zu 
                         traditionellen Snacks und Fast Food. Wir bieten eine Vielzahl von Snacks an, die 
                         ideal für den schnellen Hunger zwischen den Schulstunden oder während einer
@@ -42,7 +43,7 @@
                         (per Überweisung) mit Geld aufgeladen werden und das Guthaben kann ausschließlich 
                         in der Mensa oder am Kiosk ausgegeben werden. Wir akzeptieren kein Bargeld, 
                         um unseren Schülern mehr Sicherheit und Komfort zu bieten.</p>
-                        <img src="./images/ako-karte.jpg" alt="Bild der Ako-Karte">
+                        <div class="img"><img src="./images/ako-karte.jpg" alt="Bild der Ako-Karte"></div>
                         <p>Wir sind stolz darauf, eine positive Umgebung für unsere Schüler zu schaffen, 
                         indem wir ihnen gesunde und nahrhafte Lebensmittel anbieten. Besuchen Sie uns 
                         und erleben Sie den Geschmack und die Qualität unserer Produkte!</p>
@@ -53,7 +54,7 @@
                   <h2>Unser Angebot</h2>
                   <p>Unser Schulkiosk bietet eine große Auswahl an leckeren Snacks und Getränken für die Pause 
                     oder den Hunger zwischendurch. Hier sind unsere Produkte:</p>
-                    
+                <div class="listing">    
                   <ul>
                     <li><h3>Getränkeauswahl</h3></li>
                         <ul>
@@ -99,6 +100,7 @@
                             <li>Chicken Nuggets 6er</li>
                          </ul>
                     </ul>
+                </div>
                 </section>
             </main>
 
@@ -179,6 +181,24 @@ window.addEventListener("scroll", function() {
       });
       navLinks[index].classList.add("active");
     }
+  });
+});
+// Erstellen eines Arrays mit allen Abschnitts-Elementen auf der Seite
+var sections = document.querySelectorAll("section");
+
+// Iteriere durch jedes Element im "navLinks"-Array und füge einen Klick-Event-Listener hinzu
+navLinks.forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault(); // Verhindern der Standard-Scroll-Funktionalität
+    var targetId = this.getAttribute("href"); // Abrufen der Ziel-ID aus dem Link-Attribut
+    var targetSection = document.querySelector(targetId); // Abrufen des Abschnitts-Elements mit der Ziel-ID
+    var targetOffset = targetSection.offsetTop; // Abrufen der vertikalen Position des Ziel-Elements auf der Seite
+
+    // Animiere das Scrollen zur Zielposition über 500ms
+    window.scrollTo({
+      top: targetOffset,
+      behavior: "smooth"
+    });
   });
 });
 
