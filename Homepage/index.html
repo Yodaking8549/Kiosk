@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Willkommen beim Schulkiosk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Willkommen beim Schulkiosk</h1>
+    <nav class="topnav">
+      <a class="active" href="#angebot">Angebot</a>
+      <a href="#über uns">Über uns</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="angebot">
+      <h2>Unser Angebot</h2>
+      <p>Unser Schulkiosk bietet eine große Auswahl an leckeren Snacks und Getränken für die Pause oder den Hunger zwischendurch. Hier sind einige unserer beliebtesten Produkte:</p>
+
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+
+    <section id="über uns">
+      <h2>Über uns</h2>
+      <div class="text">
+        <p>Willkommen beim Kiosk des Aloisiuskollegs! Wir sind stolz darauf, den Schülern 
+            unserer Schule eine breite Auswahl an gesunden und leckeren Snacks, Getränken 
+            und anderen Produkten anbieten zu können. Unser Kiosk steht auf dem oberen 
+            Schulhof und ist in beiden großen Pausen geöffnet.</p>
+        <p>Unsere Produkte sind sorgfältig ausgewählt und bieten eine gesunde Alternative zu 
+            traditionellen Snacks und Fast Food. Wir bieten eine Vielzahl von Snacks an, die 
+            ideal für den schnellen Hunger zwischen den Schulstunden oder während einer
+            Pause sind. Von Müsliriegeln über Nüsse und Trockenfrüchte bis hin zu Joghurts 
+            und frischen Obst- und Gemüsebechern haben wir für jeden Geschmack etwas 
+            dabei.</p>
+        <p>Unsere Getränkeauswahl umfasst eine Vielzahl von Optionen, einschließlich Wasser, 
+            Säfte, Smoothies, Milchprodukte und Erfrischungsgetränke. Wir bieten auch 
+            verschiedene Arten von Kaffee und Tee an, um die Schüler zu unterstützen, die 
+            eine Tasse Koffein benötigen, um durch den Schultag zu kommen.</p>
+        <p>Unser Kiosk basiert auf einem Kartensystem, das heißt, dass unsere Schüler 
+            ihre Ako-Karte verwenden können, um Produkte zu kaufen. Die Ako-Karte kann 
+            mit Geld aufgeladen werden (per Überweisung) und das Guthaben kann ausschließlich 
+            in der Mensa oder am Kiosk ausgegeben werden. Wir akzeptieren kein Bargeld, 
+            um unseren Schülern mehr Sicherheit und Komfort zu bieten.</p>
+        <p>Wir sind stolz darauf, eine positive Umgebung für unsere Schüler zu schaffen, 
+            indem wir ihnen gesunde und nahrhafte Lebensmittel anbieten. Besuchen Sie uns 
+            und erleben Sie den Geschmack und die Qualität unserer Produkte!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Schulkiosk</p>
+  </footer>
+
+  <script>
+    var navbar = document.querySelector(".topnav");
+    var links = navbar.getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].classList.remove("active");
+        this.classList.add("active");
+      });
+    }
+
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.querySelector(".topnav");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+</body>
+</html>
