@@ -10,27 +10,13 @@
   <header>
     <h1>Willkommen beim Schulkiosk</h1>
     <nav class="topnav">
-      <a class="active" href="#angebot">Angebot</a>
-      <a href="#über uns">Über uns</a>
+      <a class="active" href="#über-uns">Über uns</a>
+      <a href="#angebot">Angebot</a>
     </nav>
   </header>
 
   <main>
-    <section id="angebot">
-      <h2>Unser Angebot</h2>
-      <p>Unser Schulkiosk bietet eine große Auswahl an leckeren Snacks und Getränken für die Pause oder den Hunger zwischendurch. Hier sind einige unserer beliebtesten Produkte:</p>
-
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </section>
-
-    <section id="über uns">
+    <section id="über-uns">
       <h2>Über uns</h2>
       <div class="text">
         <p>Willkommen beim Kiosk des Aloisiuskollegs! Wir sind stolz darauf, den Schülern 
@@ -49,13 +35,27 @@
             eine Tasse Koffein benötigen, um durch den Schultag zu kommen.</p>
         <p>Unser Kiosk basiert auf einem Kartensystem, das heißt, dass unsere Schüler 
             ihre Ako-Karte verwenden können, um Produkte zu kaufen. Die Ako-Karte kann 
-            mit Geld aufgeladen werden (per Überweisung) und das Guthaben kann ausschließlich 
+            (per Überweisung) mit Geld aufgeladen werden und das Guthaben kann ausschließlich 
             in der Mensa oder am Kiosk ausgegeben werden. Wir akzeptieren kein Bargeld, 
             um unseren Schülern mehr Sicherheit und Komfort zu bieten.</p>
         <p>Wir sind stolz darauf, eine positive Umgebung für unsere Schüler zu schaffen, 
             indem wir ihnen gesunde und nahrhafte Lebensmittel anbieten. Besuchen Sie uns 
             und erleben Sie den Geschmack und die Qualität unserer Produkte!</p>
       </div>
+    </section>
+
+    <section id="angebot">
+      <h2>Unser Angebot</h2>
+      <p>Unser Schulkiosk bietet eine große Auswahl an leckeren Snacks und Getränken für die Pause oder den Hunger zwischendurch. Hier sind einige unserer beliebtesten Produkte:</p>
+
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </section>
   </main>
 
@@ -64,28 +64,79 @@
   </footer>
 
   <script>
-    var navbar = document.querySelector(".topnav");
-    var links = navbar.getElementsByTagName("a");
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].classList.remove("active");
-        this.classList.add("active");
+// Wähle das Element mit der Klasse "topnav" aus und speichere es in der Variablen "navbar"
+var navbar = document.querySelector(".topnav");
+
+// Wähle alle Anchor-Tags innerhalb der "navbar" aus und speichere sie in der Variablen "links"
+var links = navbar.getElementsByTagName("a");
+
+// Schleife durch jedes Anchor-Tag in der "links"-Variable und füge einen Event-Listener hinzu
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function() {
+
+    // Entferne die Klasse "active" von allen Elementen mit dieser Klasse
+    var current = document.getElementsByClassName("active");
+    current[0].classList.remove("active");
+
+    // Füge die Klasse "active" zum geklickten Element hinzu
+    this.classList.add("active");
+  });
+}
+
+// Füge einen Event-Listener hinzu, um auf das Scroll-Event der Seite zu reagieren
+window.onscroll = function() {myFunction()};
+
+// Speichere die vertikale Position der "navbar" in der Variablen "sticky"
+var navbar = document.querySelector(".topnav");
+var sticky = navbar.offsetTop;
+
+// Definiere die "myFunction", die ausgeführt wird, wenn die Seite gescrollt wird
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+
+    // Füge die Klasse "sticky" zur "navbar" hinzu, wenn sie die vertikale Position "sticky" erreicht hat
+    navbar.classList.add("sticky")
+  } else {
+
+    // Entferne die Klasse "sticky" von der "navbar", wenn sie unterhalb der vertikalen Position "sticky" liegt
+    navbar.classList.remove("sticky");
+  }
+}
+
+    // Erhalten aller Links in der Top-Navigationsleiste
+var navLinks = document.querySelectorAll(".topnav a");
+
+// Erstellen eines Arrays mit den Abschnitts-IDs, zu denen jeder Link gehört
+var sectionIds = [];
+navLinks.forEach(function(link) {
+  var sectionId = link.getAttribute("href").slice(1);
+  sectionIds.push(sectionId);
+});
+
+// Event-Handler für das Scroll-Ereignis des Fensters
+window.addEventListener("scroll", function() {
+  // Aktuelle Position des Benutzers auf der Seite
+  var currentPosition = window.pageYOffset;
+
+  // Für jeden Abschnitt auf der Seite
+  sectionIds.forEach(function(sectionId, index) {
+    // Element des aktuellen Abschnitts abrufen
+    var section = document.getElementById(sectionId);
+
+    // Überprüfen, ob das Element auf dem Bildschirm sichtbar ist
+    if (
+      section.offsetTop <= currentPosition + 50 &&
+      section.offsetTop + section.offsetHeight > currentPosition + 50
+    ) {
+      // Wenn das Element sichtbar ist, das entsprechende Element in der Top-Navigationsleiste auswählen
+      navLinks.forEach(function(link) {
+        link.classList.remove("active");
       });
+      navLinks[index].classList.add("active");
     }
+  });
+});
 
-    window.onscroll = function() {myFunction()};
-
-    var navbar = document.querySelector(".topnav");
-    var sticky = navbar.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
   </script>
 </body>
 </html>
