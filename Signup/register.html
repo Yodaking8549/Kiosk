@@ -15,31 +15,25 @@
                 <span>Noch keinen Account?</span>
                 <header>Registrieren</header>
             </div>
-
+            <form action="register.php" method="post" autocomplete="off">
             <div class="input-field">
-                <input type="text" class="input" placeholder="Benutzername" required>
+                <input type="text" class="input" name="username" placeholder="Benutzername" id="username" required>
                 <i class="bx bx-user"> </i>
             </div>
             <div class="input-field">
-                <input type="password" class="input" placeholder="Passwort" required>
+                <input type="password" class="input" name="password" placeholder="Passwort" id="password" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-field">
-                <input type="password" class="input" placeholder="Passwort bestätigen" required>
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-field">
-                <input type="email" class="input" placeholder="Email" required>
+                <input type="email" class="input" name="email" placeholder="Email" id="email" required>
                 <i class='bx bx-envelope'></i>
             </div>
             <div class="input-field">
                 <input type="submit" class="submit" value="Registrieren">
-            </div>
-
+            </div>           
+            </form>
             <div class="bottom">
                 <div class="left">
-                    <input type="checkbox" id="check">
-                    <label for="check">Ich stimme den <a href="#">Nutzungsbedingungen</a> zu</label>
                 </div>
             </div>
             <div class="subbottom">
