@@ -1,21 +1,41 @@
+<!-- Definiert den Typ des Dokuments als HTML -->
 <!DOCTYPE html>
+
+<!-- Definiert die Sprache der Webseite als Deutsch -->
 <html lang="de">
+    
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Kiosk</title>
-      <link rel="stylesheet" href="style.css">
+        <!-- Definiert das Zeichenkodierungsschema als UTF-8 -->
+        <meta charset="UTF-8">
+
+        <!-- Definiert die Anzeigeeinstellungen auf mobilen Geräten -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Definiert den Titel der Webseite -->
+        <title>Kiosk</title>
+
+        <!-- Verknüpft das Stylesheet der Webseite -->
+        <link rel="stylesheet" href="style.css">
     </head>
 
-
     <body>
+        <!-- Definiert ein Div-Element für das Hintergrundbild -->
         <div class="background-image"></div>
+
+        <!-- Definiert ein Div-Element für den Hauptinhalt der Webseite -->
         <div class="container">
+            <!-- Definiert den Header-Bereich der Webseite -->
             <header>
+                <!-- Definiert die Navigation als Top-Navigation -->
                 <nav class="topnav">
-                <a class="active" href="#über-uns">Über uns</a>
-                <a href="#angebot">Angebot</a>
-                <a href="#Öffnungszeiten">Öffnungszeiten</a>
+                    <!-- Definiert einen ausgewählten Link für die Über-Uns-Seite -->
+                    <a class="active" href="#über-uns">Über uns</a>
+
+                    <!-- Definiert einen Link für die Angebot-Seite -->
+                    <a href="#angebot">Angebot</a>
+
+                    <!-- Definiert einen Link für die Öffnungszeiten-Seite -->
+                    <a href="#Öffnungszeiten">Öffnungszeiten</a>
                 </nav>
             </header>
 
@@ -28,7 +48,7 @@
                         unserer Schule eine breite Auswahl an gesunden und leckeren Snacks, Getränken 
                         und anderen Produkten anbieten zu können. Unser Kiosk steht auf dem oberen 
                         Schulhof und ist in beiden großen Pausen geöffnet.</p>
-                        <div class="img"><img src="./images/kiosk.jpg" alt="Bild des Kiosks"></div>
+                        <div class="img"><img src="./images/Kiosk2.jpeg" alt="Bild des Kiosks"></div>
                         <p>Unsere Produkte sind sorgfältig ausgewählt und bieten eine gesunde Alternative zu 
                         traditionellen Snacks und Fast Food. Wir bieten eine Vielzahl von Snacks an, die 
                         ideal für den schnellen Hunger zwischen den Schulstunden oder während einer
@@ -44,36 +64,51 @@
                         (per Überweisung) mit Geld aufgeladen werden und das Guthaben kann ausschließlich 
                         in der Mensa oder am Kiosk ausgegeben werden. Wir akzeptieren kein Bargeld, 
                         um unseren Schülern mehr Sicherheit und Komfort zu bieten.</p>
-                        <div class="img"><img src="./images/ako-karte.jpg" alt="Bild der Ako-Karte"></div>
+                        <div class="img"><img src="./images/Akokarte1.jpeg" alt="Bild der Ako-Karte"></div>
                         <p>Wir sind stolz darauf, eine positive Umgebung für unsere Schüler zu schaffen, 
                         indem wir ihnen gesunde und nahrhafte Lebensmittel anbieten. Besuchen Sie uns 
                         und erleben Sie den Geschmack und die Qualität unserer Produkte!</p>
                     </div>
                 </section>
 
-                <section id="angebot">
-                  <br><br><br><h2>Unser Angebot</h2>
-                  <p>Unser Schulkiosk bietet eine große Auswahl an leckeren Snacks und Getränken für die Pause 
-                    oder den Hunger zwischendurch. Hier sind unsere Produkte:</p>
-                <div class="listing">    
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Produkt</th>
-                        <th>Preis</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <h3>Getränkeauswahl</h3>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Coca cola (light, zero, classic)</td>
-                        <td>2,50 €</td>
-                      </tr>
+                <!-- Definiert eine Sektion für das Angebot -->
+<section id="angebot">
+  <!-- Fügt eine Zeilenumbruch ein -->
+  <br><br><br>
+
+  <!-- Definiert eine Überschrift für das Angebot -->
+  <h2>Unser Angebot</h2>
+
+  <!-- Definiert einen Absatz zur Beschreibung des Angebots -->
+  <p>Unser Schulkiosk bietet eine große Auswahl an leckeren Snacks und Getränken für die Pause 
+  oder den Hunger zwischendurch. Hier sind unsere Produkte:</p>
+
+  <!-- Definiert eine Liste von Produkten innerhalb einer Tabelle -->
+  <div class="listing">    
+      <table>
+          <!-- Definiert die Tabellenüberschrift -->
+          <thead>
+              <tr>
+                  <th>Produkt</th>
+                  <th>Preis</th>
+              </tr>
+          </thead>
+          <!-- Definiert den Tabellenkörper -->
+          <tbody>
+              <!-- Definiert eine Zeile für die Getränkeauswahl -->
+              <tr>
+                  <td>
+                      <!-- Definiert eine Überschrift für die Getränkeauswahl -->
+                      <h3>Getränkeauswahl</h3>
+                  </td>
+                  <td></td>
+              </tr>
+              <!-- Definiert eine Zeile für Coca Cola -->
+              <tr>
+                  <td>Coca cola (light, zero, classic)</td>
+                  <td>2,50 €</td>
+              </tr>
+              <!-- Dies Gilt auch für den Rest der Tabelle -->
                       <tr>
                         <td>Fanta</td>
                         <td>2,50 €</td>
@@ -222,25 +257,46 @@
                   </table>
                 </div>
                 </section>
-                <section id="Öffnungszeiten">
-                    <div class="Öffnungszeiten">
-                      <br><br><br><h2>Öffnungszeiten</h2>
-                        <ul>
-                          <li>Montag - Freitag</li>
-                          <li>1. Pause: 09:35 - 09:50 Uhr</li>
-                          <li>2. Pause: 11:30 - 11:45 Uhr</li>
-                        </ul>
-                        <div class="box" onclick="revealAnswer()">Hat der Kiosk heute offen? Klick hier, 
-                            um es herauszufinden!</div>
-                        <div class="answer" id="answer">Ja, der Kiosk ist heute geöffnet!</div>
-                </section>
-            </main>
+<!-- Definiert eine Sektion für die Öffnungszeiten -->
+<section id="Öffnungszeiten">
+  <!-- Definiert einen Container für die Öffnungszeiten -->
+  <div class="Öffnungszeiten">
+      <!-- Fügt einige Zeilenumbrüche hinzu -->
+      <br><br><br>
 
-            <footer>
-                <p>&copy; 2023 Schulkiosk</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            </footer>
-        </div>
-    </body>
+      <!-- Definiert eine Überschrift für die Öffnungszeiten -->
+      <h2>Öffnungszeiten</h2>
+
+      <!-- Definiert eine ungeordnete Liste von Öffnungszeiten -->
+      <ul>
+          <li>Montag - Freitag</li>
+          <li>1. Pause: 09:35 - 09:50 Uhr</li>
+          <li>2. Pause: 11:30 - 11:45 Uhr</li>
+      </ul>
+
+      <!-- Definiert eine Box mit einem Klickereignis -->
+      <div class="box" onclick="revealAnswer()">Hat der Kiosk heute offen? Klick hier, 
+      um es herauszufinden!</div>
+
+      <!-- Definiert eine Antwort-Box, die standardmäßig ausgeblendet ist -->
+      <div class="answer" id="answer">Ja, der Kiosk ist heute geöffnet!</div>
+  </div>
+</section>
+
+<!-- Definiert den Abschluss des Hauptbereichs -->
+</main>
+
+<!-- Definiert einen Fußbereich für die Website -->
+<footer>
+  <p>&copy; 2023 Schulkiosk</p>
+
+  <!-- Fügt einige Zeilenumbrüche hinzu -->
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</footer>
+<!-- Definiert das Ende des HTML-Dokuments -->
+</div>
+</body>
+
 
   <script>
 // Wähle das Element mit der Klasse "topnav" aus und speichere es in der Variablen "navbar"
@@ -333,18 +389,21 @@ navLinks.forEach(function(link) {
     });
   });
 });
+// Diese Funktion zeigt eine Antwort an, indem sie die Anzeigeeigenschaft eines Elements mit der ID "answer" auf "block" ändert.
+// Sie löst auch eine Animation aus, die die Anzeigeeigenschaft eines Elements mit der Klasse "box" auf "none" ändert.
 function revealAnswer() {
-			document.getElementById("answer").style.display = "block";
-			document.querySelector(".box").style.animationName = "disappear";
-			document.querySelector(".box").style.animationDuration = "1s";
-			document.querySelector(".box").style.animationFillMode = "forwards";
-		}
+document.getElementById("answer").style.display = "block"; // Antwort-Element anzeigen
+document.querySelector(".box").style.animationName = "disappear"; // Verschwinden-Animation für Box-Element auslösen
+document.querySelector(".box").style.animationDuration = "1s"; // Dauer der Animation auf 1 Sekunde setzen
+document.querySelector(".box").style.animationFillMode = "forwards"; // Fill-Modus der Animation auf "forwards" setzen
+}
 
-		document.addEventListener("animationend", function(event) {
-			if (event.animationName === "disappear") {
-				document.querySelector(".box").style.display = "none";
-			}
-		});
+// Dieser Event-Listener hört auf das Ende der "disappear" Animation und setzt die Anzeigeeigenschaft des "box" Elements auf "none".
+document.addEventListener("animationend", function(event) {
+if (event.animationName === "disappear") {
+document.querySelector(".box").style.display = "none"; // Anzeigeeigenschaft des Box-Elements auf "none" setzen
+}
+});
   </script>
 </body>
 </html>
